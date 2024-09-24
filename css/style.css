@@ -28,7 +28,7 @@ body {
 
 /* Navegación */
 .navigation {
-    background-image: url('img/istockphoto-472321898-612x612.jpg'); /* Ruta de la imagen de corcho */
+    background-image: url("../img/corcho.jpg"); /* Ruta de la imagen de corcho */
     background-size: cover;
     padding: 10px;
     border-radius: 10px;
@@ -139,7 +139,7 @@ h1 {
 
 /* Fondo de corcho para las secciones */
 .section-content {
-    background-image: url('img/istockphoto-472321898-612x612.jpg'); /* Ruta de la imagen del corcho */
+    background-image: url("../img/corcho.jpg"); /* Ruta de la imagen del corcho */
     background-size: cover;
     background-repeat: no-repeat;
     padding: 40px;
