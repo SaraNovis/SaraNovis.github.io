@@ -19,7 +19,6 @@ body {
     stroke: none;  /* Eliminamos el trazo para que solo el relleno sea visible */
 }
 
-
 /* Estilos del texto SVG */
 .svg-text text {
     fill: none;
@@ -32,42 +31,23 @@ body {
     animation: draw 40s ease forwards;
 }
 
-
 /* Navegación */
 .navigation {
-    /*background-image: url("../img/corcho.jpg"); /* Ruta de la imagen de corcho */
     background-color: transparent; /* Fondo transparente para que solo se vean los post-its */
-    background-size: cover;
     padding: 10px;
-    border-radius: 10px;
     text-align: center;
-    /* margin-top: -20px; */
     margin-bottom: 300px;
-    
-    /* Ajuste del borde de textura de madera */
-    border: 12px solid transparent;
-    border-image: url("../img/madera.jpg") 30; /* Imagen de textura de madera */
-    border-radius: 15px;
-    
-    /* Sombras para dar profundidad */
-    box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.2);
-    
     /* Centrado horizontal */
     margin: 0 auto;
-    
     /* Ajuste del ancho */
     width: 90%; /* Ajusta este valor según sea necesario */
 }
 
-
-
 .navigation ul {
     list-style: none;
     padding: 0;
-    /* margin: 0; */
     font-family: "Space Grotesk", sans-serif;
     margin-top: -100px;
-   
 }
 
 .navigation ul li {
@@ -184,10 +164,6 @@ h1 {
     width: 80%; /* Cambia este valor para ajustar el espacio en los lados */
 }
 
-
-
-
-
 /* Mostrar solo la sección visible */
 .section-content.visible {
     display: block;
@@ -241,6 +217,84 @@ h1 {
     background-color: #c2e8e4;
     box-shadow: 0px 0px 10px 5px rgba(0, 255, 255, 0.6); /* Efecto hover sombra */
 }
+/* Efecto parallax para la sección del blog */
+.parallax-blog {
+    position: relative;
+    background-image: url('ruta/a/tu/fondo.jpg'); /* Fondo que quieras usar */
+    height: 400px;
+    background-attachment: fixed; /* El efecto parallax */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+.parallax-content {
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente para el texto */
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.parallax-blog h2 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.parallax-blog p {
+    font-size: 18px;
+}
+
+/* Avatar del blog */
+.avatar-blog {
+    width: 150px;
+    height: auto;
+    border-radius: 50%;
+    margin-top: 20px;
+    animation: avatarFloat 4s ease-in-out infinite; /* Animación de flotación */
+}
+
+@keyframes avatarFloat {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+/* Sección de posts del blog */
+#blog-section {
+    padding: 40px 20px;
+    background-color: #f4f4f4;
+}
+
+.blog-post {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.blog-post h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.blog-post p {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+
 /* Estilos para el footer */
 footer {
     background-color: #087655; /* Fondo del footer */
@@ -280,11 +334,9 @@ footer {
 }
 
 .contact-info p {
-    /* margin: 5px 0; */
     font-family: "Courier Prime", monospace;
     font-size: 18px; /* Tamaño del texto de contacto */
     margin-top: -20px;
-    /* margin-bottom: 10px; */
 }
 
 .contact-info a {
