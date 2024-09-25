@@ -30,7 +30,7 @@ document.addEventListener("DOMContentLoaded", function () {
             font-family: "Handjet", sans-serif;
             stroke-dasharray: 500;
             stroke-dashoffset: 500;
-            animation: draw 25s ease forwards;
+            animation: draw 40s ease forwards;
         }
 
         @keyframes draw {
@@ -41,16 +41,16 @@ document.addEventListener("DOMContentLoaded", function () {
     `;
     document.head.appendChild(svgStyle);
 
-    // Selección de letras aleatorias
-    const letters = document.querySelectorAll('.letter');
-    let filledLetters = [];
-    while (filledLetters.length < 3) {
-        const randomIndex = Math.floor(Math.random() * letters.length);
-        if (!filledLetters.includes(randomIndex)) {
-            letters[randomIndex].classList.add('fill-black');
-            filledLetters.push(randomIndex);
-        }
+  // Selección de letras aleatorias
+const letters = document.querySelectorAll('.letter');
+let filledLetters = [];
+while (filledLetters.length < 3) {
+    const randomIndex = Math.floor(Math.random() * letters.length);
+    if (!filledLetters.includes(randomIndex)) {
+        letters[randomIndex].classList.add('fill-black');
+        filledLetters.push(randomIndex);
     }
+}
 
     // Lógica para mostrar y ocultar secciones
     const enlaces = document.querySelectorAll('.navigation a');
