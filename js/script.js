@@ -47,7 +47,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Efecto de la máquina de escribir para el nombre
     const typewriterElement = document.querySelector(".typewriter");
-    const words = ["Sara Novis", "Desarrolladora Web", "Community Manager", "Experiencia Marketing Digital"];
+    const words = [ "Desarrolladora Web", "Community Manager", "Experiencia Marketing Digital"];
     let wordIndex = 0;
     let letterIndex = 0;
     let currentWord = "";
