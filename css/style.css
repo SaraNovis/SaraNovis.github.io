@@ -276,24 +276,7 @@ h1 {
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3); /* Más sombra en hover */
 }
 /* Responsive Styles */
-@media (max-width: 1200px) {
-    .foto-colgada {
-        right: 15%;
-        width: 250px;
-    }
 
-    .contact-paper {
-        width: 350px;
-        margin-left: 60px;
-    }
-}
-
-@media (max-width: 768px) {
-    .foto-colgada {
-        right: 10%;
-        top: 40%;
-        width: 200px;
-    }}
 
     @media (max-width: 600px) {
         .navigation {
