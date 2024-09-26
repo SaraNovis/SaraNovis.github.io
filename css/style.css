@@ -1,28 +1,27 @@
-/* Estilos generales */
-body {
-    background-color: #1f3e3e;
-    color: #ffffff;
-    font-family: 'Nerko One', cursive;
+html, body {
+    height: 100%; /* Asegura que el html y el body ocupen el 100% de la altura */
     margin: 0;
     padding: 0;
+    font-family: 'Nerko One', cursive;
 }
 
-
-
+body {
+    background-image: url("../img/tablero-corcho-suministros-papeleria-textura-fondo-mesa-madera_182252-5946.avif");
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    background-size: cover; /* Escala la imagen para cubrir todo el fondo */
+    background-position: center; /* Centra la imagen de fondo */
+    height: 100%; /* Asegura que el fondo cubra toda la altura */
+}
 
 
 /* Navegación */
 .navigation {
    
-    background-size: cover;
-    padding: 10px;
-    border-radius: 10px;
+    background-color: transparent; /* Eliminar el fondo */
+    padding: 0;
+    margin-top: 20px;
+    border: none; /* Quitar cualquier borde */
     text-align: center;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
-    margin-top: -40px;
-    /* width: 90%; Ajusta este valor para hacer la barra más ancha */
-    margin: 0 auto; /* Centra la barra */
-    height: 50px;
 }
 
 
@@ -82,13 +81,13 @@ h1 {
     font-family: "Handjet", sans-serif;
     margin-left: 100px;
     font-size: 50px;
-    color: #ffffff;
+    color: #1c1b19;
 }
 
 /* Estilo para el párrafo debajo de la imagen */
 .presentation p {
     font-size: 18px;
-    color: #d0e2e2;
+    color: #034444;
     margin-left: 100px;
     font-family: "Courier Prime", monospace;
 }
@@ -107,7 +106,7 @@ h1 {
 
 /* Fondo de corcho para las secciones */
 .section-content {
-    background-image: url("../img/corcho.jpg"); /* Ruta de la imagen del corcho */
+   
     background-size: cover;
     background-repeat: no-repeat;
     padding: 40px;
@@ -115,6 +114,7 @@ h1 {
     min-height: 400px; /* Ajusta el tamaño según sea necesario */
     display: none; /* Ocultar todas las secciones al cargar la página */
     position: relative;
+    width: 400px;
 }
 
 /* Mostrar solo la sección visible */
@@ -158,7 +158,7 @@ h1 {
     background-color: #6ACFC7;
     border: none;
     border-radius: 5px;
-    color: #162e2e;
+    color: #1b10b4;
     cursor: pointer;
     font-size: 16px;
     text-align: center;

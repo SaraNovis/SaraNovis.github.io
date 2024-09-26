@@ -47,13 +47,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Efecto de la máquina de escribir para el nombre
     const typewriterElement = document.querySelector(".typewriter");
-    const words = ["Sara Novis", "Desarrolladora Web", "Community Manager", "Especialista en Marketing"];
+    const words = ["Sara Novis", "Desarrolladora Web", "Community Manager", "Experiencia Marketing Digital"];
     let wordIndex = 0;
     let letterIndex = 0;
     let currentWord = "";
     let isDeleting = false;
-    const typingSpeed = 150; // Velocidad de escritura
-    const deletingSpeed = 100; // Velocidad de borrado
+    const typingSpeed = 200; // Velocidad de escritura
+    const deletingSpeed = 80; // Velocidad de borrado
     const delayBetweenWords = 1500; // Pausa entre palabras completas
 
     function type() {
