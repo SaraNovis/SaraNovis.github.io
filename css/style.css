@@ -79,7 +79,7 @@ body {
 .foto-colgada {
     position: absolute;
     top: 30%; 
-    right: 40%; /* Cambia este valor para mover la imagen hacia la izquierda */
+    right: 30%; /* Cambia este valor para mover la imagen hacia la izquierda */
     width: 300px; /* Ajusta el tamaño de la imagen */
     transform: rotate(-5deg); /* Le da un efecto de estar colgada */
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2); /* Sombra */
@@ -96,7 +96,7 @@ body {
     position: absolute;
     width: 15px;
     height: 15px;
-    background-color: red; /* Color del pin */
+    background-color: rgb(22, 125, 8); /* Color del pin */
     border-radius: 50%;
     top: -10px;
     left: 50%;
@@ -105,6 +105,74 @@ body {
 }
 
 
+.contact-paper {
+    display: block; /* La hoja de contacto es visible en la Home */
+    width: 400px;
+    padding: 20px;
+    margin-left: 120px;
+    margin-top: 100px;
+    background-color: white;
+    border: 2px solid #ddd;
+    box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.1);
+    transform: rotate(2deg); /* Le da un efecto de estar colgada */
+    position: relative;
+    background-image: linear-gradient(90deg, transparent 24px, #ccc 25px, #ccc 26px, transparent 27px),
+    linear-gradient(#ccc 25px, transparent 25px);
+    background-size: 28px 28px; /* Tamaño de los cuadros */
+}
+.contact-paper.hidden {
+    display: none; /* Oculta la hoja de contacto cuando se navega por las secciones */
+}
+
+.contact-paper h2 {
+    font-size: 24px;
+    text-align: center;
+    font-family: 'Nerko One', cursive;
+    margin-bottom: 15px;
+}
+
+.contact-paper p {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+.contact-paper a {
+    color: #333;
+    text-decoration: none;
+}
+
+.contact-paper a:hover {
+    text-decoration: underline;
+}
+
+.social-icons {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.social-icons a {
+    font-size: 24px;
+    margin: 0 10px;
+    color: #333;
+}
+
+.social-icons a:hover {
+    color: #0073e6;
+}
+/* Chincheta */
+.chincheta {
+    content: '';
+    width: 20px;
+    height: 20px;
+    background-color: blue; /* Color del pin */
+    border-radius: 50%;
+    position: absolute;
+    top: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    
+}
 
 
 /* Estilos para el H1 */
@@ -118,13 +186,6 @@ h1 {
     font-size: 20px;
 }
 
-/* Estilo para el párrafo debajo de la imagen */
-.presentation p {
-    font-size: 18px;
-    color: #034444;
-    margin-left: 100px;
-    font-family: "Courier Prime", monospace;
-}
 
 /* Contenedor para imagen y presentación */
 .container {
@@ -134,9 +195,6 @@ h1 {
     padding: 20px;
     margin-top: -20px;
 }
-
-
-
 
 /* Fondo de corcho para las secciones */
 .section-content {
@@ -160,17 +218,18 @@ h1 {
 .post-it {
     background-color: #f4e04d; /* Color típico de un post-it */
     width: 300px; /* Ajusta el tamaño para acomodar más texto */
-    height: 300px;
+    height: 420px;
     padding: 30px;
     border-radius: 10px;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
     position: relative;
     font-family: 'Courier Prime', monospace; /* Fuente estilo manual */
-    margin: 0 auto;
-    transform: rotate(-1deg); /* Ligera inclinación para estilo post-it */
+    margin-top: -200px;
+    /* margin: 0 auto; */
+    transform: rotate(3deg); /* Ligera inclinación para estilo post-it */
     text-align: left; /* Alineación del texto dentro del post-it */
-    margin-left: 60px;
-    margin-top: 50px;
+    margin-left: 200px;
+    margin-top: 30px;
 }
 
 /* Pin para simular que el post-it está colgado */
@@ -186,23 +245,24 @@ h1 {
     transform: translateX(-50%);
 }
 
-/* Botón "Volver a la Home" */
 .back-to-home {
     display: inline-block;
-    margin-top: 20px;
+    background-color: #f4e04d; /* Color de fondo similar al Post-it */
+    color: #083f83; /* Color del texto */
     padding: 10px 20px;
-    background-color: #6ACFC7;
-    border: none;
-    border-radius: 5px;
-    color: #1b10b4;
-    cursor: pointer;
-    font-size: 16px;
-    text-align: center;
-    font-family: "Handjet", sans-serif;
+    margin-left: -150px;
+    font-family: 'Courier Prime', monospace; /* Tipografía que encaje con la página */
     font-weight: bold;
+    border: 2px solid #083f83; /* Borde oscuro para darle énfasis */
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); /* Sombra para dar profundidad */
+    text-decoration: none;
+    cursor: pointer;
+    transform: rotate(-2deg); /* Leve rotación para parecer "pegado" */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .back-to-home:hover {
-    background-color: #c2e8e4;
-    box-shadow: 0px 0px 10px 5px rgba(0, 255, 255, 0.6); /* Efecto hover sombra */
+   
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3); /* Más sombra en hover */
 }

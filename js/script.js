@@ -4,6 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const enlaces = document.querySelectorAll('.navigation a');
     const secciones = document.querySelectorAll('.section-content');
     const homeContainer = document.querySelector('.container'); // Home (la imagen y presentación)
+    const contactPaper = document.querySelector('.contact-paper'); // La hoja de contacto
     const backButtons = document.querySelectorAll('.back-to-home'); // Botones para volver a la home
 
     // Inicialmente, oculta todas las secciones menos la Home
@@ -21,8 +22,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 seccion.classList.remove('visible');
             });
 
-            // Ocultar la Home cuando se selecciona una sección
+            // Ocultar la Home y la hoja de contacto cuando se selecciona una sección
             homeContainer.style.display = 'none';
+            contactPaper.classList.add('hidden'); // Oculta la hoja de contacto
 
             // Mostrar la sección seleccionada
             const nuevaSeccion = document.getElementById(sectionId);
@@ -40,8 +42,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 seccion.classList.remove('visible');
             });
 
-            // Mostrar la Home nuevamente
+            // Mostrar la Home nuevamente y la hoja de contacto
             homeContainer.style.display = 'flex';
+            contactPaper.classList.remove('hidden'); // Muestra la hoja de contacto
         });
     });
 
@@ -82,4 +85,3 @@ document.addEventListener('DOMContentLoaded', () => {
     type();
 
 });
-
