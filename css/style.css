@@ -22,7 +22,7 @@ body {
     margin-top: 50px;
     border: none; /* Quitar cualquier borde */
     text-align: center;
-    margin-left: -180px;
+    margin: auto;
 }
 
 
@@ -293,6 +293,30 @@ h1 {
         right: 10%;
         top: 40%;
         width: 200px;
+    }}
+
+    @media (max-width: 600px) {
+        .navigation {
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: left;
+        align-items: left;
+    }
+
+        .foto-colgada {
+            width: 200px;
+            top: 110%; 
+            right: 60%;
+        }
+
+    .navigation ul li {
+        width: 75%;
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: left;
+        align-items: left;
+        top: 65px;
+        
     }
 
     .contact-paper {
@@ -305,7 +329,28 @@ h1 {
     }
 
     .nombre-fijo {
-        font-size: 35px;
+        font-size: 22.7px;
+        overflow-wrap: anywhere;
+    }
+
+    .container {
+
+        justify-content: space-between;
+        align-items: flex-end;
+        padding: 20px;
+        margin-top: 45px;
+
+    }
+
+    h1 {
+        font-size: 18px;
+    }
+
+    .contact-paper {
+        width: 350px;
+
+    top: 225px;
+        margin: auto;
     }
 }
 
