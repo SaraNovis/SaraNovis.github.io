@@ -11,6 +11,7 @@ body {
     background-size: cover; /* Escala la imagen para cubrir todo el fondo */
     background-position: center; /* Centra la imagen de fondo */
     height: 100%; /* Asegura que el fondo cubra toda la altura */
+    
 }
 
 
@@ -29,7 +30,7 @@ body {
 .navigation ul {
     list-style: none;
     padding: 0;
-    margin: 0;
+    margin: auto;
     /* font-family: "Space Grotesk", sans-serif; */
 }
 
@@ -78,12 +79,14 @@ body {
 }
 .foto-colgada {
     position: absolute;
-    top: 30%; 
-    right: 30%; /* Cambia este valor para mover la imagen hacia la izquierda */
+    top: 20%; 
+    right: 22%; /* Cambia este valor para mover la imagen hacia la izquierda */
     width: 300px; /* Ajusta el tamaño de la imagen */
     transform: rotate(-5deg); /* Le da un efecto de estar colgada */
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2); /* Sombra */
     border: 4px solid #fff; /* Borde blanco para dar el efecto de foto polaroid */
+
+    
 }
 
 .foto-colgada img {
@@ -110,7 +113,7 @@ body {
     width: 400px;
     padding: 20px;
     margin-left: 120px;
-    margin-top: 100px;
+    margin-top: 20px;
     background-color: white;
     border: 2px solid #ddd;
     box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.1);
@@ -203,11 +206,12 @@ h1 {
     align-items: flex-start;
     padding: 20px;
     margin-top: -20px;
+    margin-left: -70px;
 }
 
 /* Fondo de corcho para las secciones */
 .section-content {
-   
+
     background-size: cover;
     background-repeat: no-repeat;
     padding: 40px;
@@ -233,12 +237,12 @@ h1 {
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
     position: relative;
     font-family: 'Courier Prime', monospace; /* Fuente estilo manual */
-    margin-top: -200px;
+    margin-top: -50px;
     /* margin: 0 auto; */
     transform: rotate(3deg); /* Ligera inclinación para estilo post-it */
     text-align: left; /* Alineación del texto dentro del post-it */
-    margin-left: 200px;
-    margin-top: 30px;
+    margin-left: 100px;
+    margin-top: 0;
 }
 
 /* Pin para simular que el post-it está colgado */
@@ -256,10 +260,11 @@ h1 {
 
 .back-to-home {
     display: inline-block;
-    background-color: #f4e04d; /* Color de fondo similar al Post-it */
-    color: #05769f; /* Color del texto */
+    
+    background-color: #0baae4; /* Color de fondo similar al Post-it */
+    color: #faf7f7; /* Color del texto */
     padding: 10px 20px;
-    margin-left: -150px;
+    margin-left: 800px;
     font-family: 'Courier Prime', monospace; /* Tipografía que encaje con la página */
     font-weight: bold;
     border: 2px solid  #034a64; /* Borde oscuro para darle énfasis */
@@ -267,7 +272,6 @@ h1 {
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); /* Sombra para dar profundidad */
     text-decoration: none;
     cursor: pointer;
-    transform: rotate(-2deg); /* Leve rotación para parecer "pegado" */
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -335,6 +339,8 @@ h1 {
     top: 225px;
         margin: auto;
     }
+
+
 }
 
 @media (max-width: 480px) {
