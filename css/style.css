@@ -7,74 +7,60 @@ body {
     padding: 0;
 }
 
-/* Contenedor para el nombre en SVG */
-#svg-name {
-    margin-top: -20px;
-    margin-bottom: -90px;
+/* Efecto de nombre como máquina de escribir */
+#nombre-animado {
+    font-family: "Courier Prime", monospace;
+    font-size: 50px;
+    color: #6ACFC7;
     text-align: center;
-}
-/* Clase para las letras aleatorias con relleno */
-.fill-black {
-    fill: #f4e04d; /* Color amarillo post-it */
-    stroke: none;  /* Eliminamos el trazo para que solo el relleno sea visible */
-}
-
-
-/* Estilos del texto SVG */
-.svg-text text {
-    fill: none;
-    stroke:  #6ACFC7;
-    stroke-width: 2px;
-    font-size: 60px;
-    font-family: "Handjet", sans-serif;
-    stroke-dasharray: 500;
-    stroke-dashoffset: 500;
-    animation: draw 40s ease forwards;
+    display: block;
+    margin-top: 30px; /* Ajuste del margen superior */
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: .15em solid #6ACFC7; /* Simulación de cursor */
+    width: 15ch;
+    animation: typing 3.5s steps(15), blink-caret .75s step-end infinite;
 }
 
+/* Efecto de escritura */
+@keyframes typing {
+    from { width: 0 }
+    to { width: 15ch }
+}
+
+@keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: #6ACFC7 }
+}
+
+/* Contenedor para el nombre en SVG (puedes eliminar si no lo usas) */
+#svg-name {
+    text-align: center;
+    margin-bottom: 20px;
+}
 
 /* Navegación */
 .navigation {
-    /*background-image: url("../img/corcho.jpg"); /* Ruta de la imagen de corcho */
-    background-color: transparent; /* Fondo transparente para que solo se vean los post-its */
-    background-size: cover;
+    background-color: transparent;
     padding: 10px;
-    border-radius: 10px;
     text-align: center;
-    /* margin-top: -20px; */
-    margin-bottom: 300px;
-    
-    /* Ajuste del borde de textura de madera */
-    border: 12px solid transparent;
-    border-image: url("../img/madera.jpg") 30; /* Imagen de textura de madera */
-    border-radius: 15px;
-    
-    /* Sombras para dar profundidad */
-    box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.2);
-    
-    /* Centrado horizontal */
+    margin-top: 50px; /* Ajustar la navegación hacia abajo */
+    margin-bottom: 100px;
     margin: 0 auto;
-    
-    /* Ajuste del ancho */
-    width: 90%; /* Ajusta este valor según sea necesario */
+    width: 90%;
 }
-
-
 
 .navigation ul {
     list-style: none;
     padding: 0;
-    /* margin: 0; */
     font-family: "Space Grotesk", sans-serif;
-    margin-top: -100px;
-   
 }
 
 .navigation ul li {
     display: inline-block;
     margin: 0 15px;
     position: relative;
-    background-color: #f4e04d; /* Fondo de color post-it */
+    background-color: #f4e04d;
     padding: 10px;
     border-radius: 5px;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
@@ -82,18 +68,16 @@ body {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Efecto hover para rotar el post-it y cambiar la sombra */
 .navigation ul li:hover {
     transform: rotate(0deg);
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
 }
 
-/* Pin para simular que está colgado */
 .navigation ul li::before {
     content: '';
     width: 12px;
     height: 12px;
-    background-color: blue; /* Color del pin */
+    background-color: blue;
     border-radius: 50%;
     position: absolute;
     top: -10px;
@@ -101,10 +85,9 @@ body {
     transform: translateX(-50%);
 }
 
-/* Enlaces de navegación */
 .navigation a {
     text-decoration: none;
-    color: #142a2a; /* Color oscuro para simular escrito a mano */
+    color: #142a2a;
     font-size: 20px;
     font-family: "Courier Prime", monospace;
     transition: color 0.3s ease;
@@ -136,7 +119,7 @@ h1 {
     justify-content: space-between;
     align-items: flex-start;
     padding: 20px;
-    margin-top: -20px;
+    margin-top: 30px;
 }
 
 /* Ajustar tamaño de la imagen */
@@ -146,7 +129,6 @@ h1 {
     margin-top: 20px;
 }
 
-/* Efecto original de la foto */
 .profile-img {
     width: 500px;
     height: auto;
@@ -160,33 +142,23 @@ h1 {
     box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.5);
 }
 
-/* Fondo de corcho para las secciones con borde de textura */
+/* Fondo de corcho para las secciones */
 .section-content {
-    background-image: url("../img/corcho.jpg"); /* Ruta de la imagen del corcho */
+    background-image: url("../img/corcho.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     padding: 40px;
     text-align: center;
-    min-height: 300px; /* Ajusta el tamaño según sea necesario */
-    display: none; /* Ocultar todas las secciones al cargar la página */
+    min-height: 300px;
+    display: none;
     position: relative;
-    
-    /* Borde de textura de madera */
     border: 12px solid transparent;
-    border-image: url("../img/madera.jpg") 30; /* Imagen de textura de madera */
-    border-radius: 15px; /* Bordes redondeados */
-    box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.2); /* Sombras para dar profundidad */
-    
-    /* Centrar el contenido con márgenes automáticos */
+    border-image: url("../img/madera.jpg") 30;
+    border-radius: 15px;
+    box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.2);
     margin: 0 auto;
-    
-    /* Ajusta el ancho para que haya más espacio a los lados */
-    width: 80%; /* Cambia este valor para ajustar el espacio en los lados */
+    width: 80%;
 }
-
-
-
-
 
 /* Mostrar solo la sección visible */
 .section-content.visible {
@@ -195,25 +167,24 @@ h1 {
 
 /* Estilo del post-it */
 .post-it {
-    background-color: #f4e04d; /* Color típico de un post-it */
-    width: 300px; /* Ajusta el tamaño para acomodar más texto */
+    background-color: #f4e04d;
+    width: 300px;
     height: 300px;
     padding: 30px;
     border-radius: 10px;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
     position: relative;
-    font-family: 'Courier Prime', monospace; /* Fuente estilo manual */
+    font-family: 'Courier Prime', monospace;
     margin: 0 auto;
-    transform: rotate(-1deg); /* Ligera inclinación para estilo post-it */
-    text-align: left; /* Alineación del texto dentro del post-it */
+    transform: rotate(-1deg);
+    text-align: left;
 }
 
-/* Pin para simular que el post-it está colgado */
 .post-it::before {
     content: '';
     width: 20px;
     height: 20px;
-    background-color: blue; /* Color del pin */
+    background-color: blue;
     border-radius: 50%;
     position: absolute;
     top: -15px;
@@ -239,18 +210,19 @@ h1 {
 
 .back-to-home:hover {
     background-color: #c2e8e4;
-    box-shadow: 0px 0px 10px 5px rgba(0, 255, 255, 0.6); /* Efecto hover sombra */
+    box-shadow: 0px 0px 10px 5px rgba(0, 255, 255, 0.6);
 }
+
 /* Estilos para el footer */
 footer {
-    background-color: #087655; /* Fondo del footer */
+    background-color: #087655;
     color: #ffffff;
-    padding: 40px 20px; /* Aumentar padding para darle más altura */
+    padding: 40px 20px;
     text-align: center;
     position: relative;
     bottom: 0;
     width: 100%;
-    border-top: 2px solid #8be8e1; /* Línea superior */
+    border-top: 2px solid #8be8e1;
     height: 60px;
 }
 
@@ -259,32 +231,26 @@ footer {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 20px; /* Aumentar el espacio entre los elementos */
-}
-
-.social-icons {
-    margin-bottom: 20px;
+    gap: 20px;
 }
 
 .social-icons a {
     text-decoration: none;
-    color: #6ACFC7; /* Color de los íconos */
-    font-size: 30px; /* Aumentar el tamaño de los íconos */
-    margin: 0 15px; /* Espaciado entre íconos */
+    color: #6ACFC7;
+    font-size: 30px;
+    margin: 0 15px;
     transition: transform 0.3s, color 0.3s;
 }
 
 .social-icons a:hover {
-    transform: scale(1.2); /* Aumenta ligeramente el tamaño al hacer hover */
-    color: #eaf4f3; /* Cambia el color al hacer hover */
+    transform: scale(1.2);
+    color: #eaf4f3;
 }
 
 .contact-info p {
-    /* margin: 5px 0; */
     font-family: "Courier Prime", monospace;
-    font-size: 18px; /* Tamaño del texto de contacto */
+    font-size: 18px;
     margin-top: -20px;
-    /* margin-bottom: 10px; */
 }
 
 .contact-info a {
