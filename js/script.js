@@ -1,56 +1,4 @@
-document.addEventListener("DOMContentLoaded", function () {
-    const nameElement = document.getElementById('svg-name');
-
-    // Añadir el contenido SVG para el nombre
-    nameElement.innerHTML = `
-        <svg viewBox="0 0 500 150" preserveAspectRatio="xMidYMid slice" class="svg-text">
-            <text x="50%" y="40%" dy=".20em" text-anchor="middle" class="text">
-                <tspan class="letter l1">S</tspan>
-                <tspan class="letter l2">a</tspan>
-                <tspan class="letter l3">r</tspan>
-                <tspan class="letter l4">a</tspan>
-                <tspan> </tspan>
-                <tspan class="letter l5">N</tspan>
-                <tspan class="letter l6">o</tspan>
-                <tspan class="letter l7">v</tspan>
-                <tspan class="letter l8">i</tspan>
-                <tspan class="letter l9">s</tspan>
-            </text>
-        </svg>
-    `;
-
-    // Añadir animación de trazo SVG
-    const svgStyle = document.createElement('style');
-    svgStyle.textContent = `
-        .svg-text text {
-            fill: none;
-            stroke: #6ACFC7;
-            stroke-width: 2px;
-            font-size: 60px;
-            font-family: "Handjet", sans-serif;
-            stroke-dasharray: 500;
-            stroke-dashoffset: 500;
-            animation: draw 25s ease forwards;
-        }
-
-        @keyframes draw {
-            to {
-                stroke-dashoffset: 0;
-            }
-        }
-    `;
-    document.head.appendChild(svgStyle);
-
-    // Selección de letras aleatorias
-    const letters = document.querySelectorAll('.letter');
-    let filledLetters = [];
-    while (filledLetters.length < 3) {
-        const randomIndex = Math.floor(Math.random() * letters.length);
-        if (!filledLetters.includes(randomIndex)) {
-            letters[randomIndex].classList.add('fill-black');
-            filledLetters.push(randomIndex);
-        }
-    }
+document.addEventListener('DOMContentLoaded', () => {
 
     // Lógica para mostrar y ocultar secciones
     const enlaces = document.querySelectorAll('.navigation a');
@@ -96,4 +44,42 @@ document.addEventListener("DOMContentLoaded", function () {
             homeContainer.style.display = 'flex';
         });
     });
+
+    // Efecto de la máquina de escribir para el nombre
+    const typewriterElement = document.querySelector(".typewriter");
+    const words = ["Sara Novis", "Desarrolladora Web", "Community Manager", "Especialista en Marketing"];
+    let wordIndex = 0;
+    let letterIndex = 0;
+    let currentWord = "";
+    let isDeleting = false;
+    const typingSpeed = 150; // Velocidad de escritura
+    const deletingSpeed = 100; // Velocidad de borrado
+    const delayBetweenWords = 1500; // Pausa entre palabras completas
+
+    function type() {
+        const word = words[wordIndex];
+        if (isDeleting) {
+            currentWord = word.substring(0, letterIndex--); // Borrar letras
+        } else {
+            currentWord = word.substring(0, letterIndex++); // Escribir letras
+        }
+
+        typewriterElement.textContent = currentWord;
+
+        if (!isDeleting && letterIndex === word.length) {
+            isDeleting = true;
+            setTimeout(type, delayBetweenWords); // Pausa al final de la palabra
+        } else if (isDeleting && letterIndex === 0) {
+            isDeleting = false;
+            wordIndex = (wordIndex + 1) % words.length; // Cambiar a la siguiente palabra
+            setTimeout(type, typingSpeed);
+        } else {
+            setTimeout(type, isDeleting ? deletingSpeed : typingSpeed);
+        }
+    }
+
+    // Iniciar el efecto de escribir
+    type();
+
 });
+

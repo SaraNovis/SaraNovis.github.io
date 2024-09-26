@@ -7,28 +7,13 @@ body {
     padding: 0;
 }
 
-/* Contenedor para el nombre en SVG */
-#svg-name {
-    margin-top: -20px;
-    margin-bottom: -90px;
-    text-align: center;
-}
 
-/* Estilos del texto SVG */
-.svg-text text {
-    fill: none;
-    stroke:  #6ACFC7;
-    stroke-width: 2px;
-    font-size: 60px;
-    font-family: "Handjet", sans-serif;
-    stroke-dasharray: 500;
-    stroke-dashoffset: 500;
-    animation: draw 25s ease forwards;
-}
+
+
 
 /* Navegación */
 .navigation {
-    background-image: url("../img/corcho.jpg") ; /* Ruta de la imagen de corcho */
+   
     background-size: cover;
     padding: 10px;
     border-radius: 10px;
@@ -45,7 +30,7 @@ body {
     list-style: none;
     padding: 0;
     margin: 0;
-    font-family: "Space Grotesk", sans-serif;
+    /* font-family: "Space Grotesk", sans-serif; */
 }
 
 .navigation ul li {
@@ -117,25 +102,8 @@ h1 {
     margin-top: -20px;
 }
 
-/* Ajustar tamaño de la imagen */
-.image-container {
-    max-width: 400px;
-    margin-right: 20px;
-    margin-top: 20px;
-}
 
-/* Efecto original de la foto */
-.profile-img {
-    width: 500px;
-    height: auto;
-    border-radius: 10px;
-    transition: transform 0.5s ease, box-shadow 0.5s ease;
-}
 
-.profile-img:hover {
-    transform: scale(1.05);
-    box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.5);
-}
 
 /* Fondo de corcho para las secciones */
 .section-content {
