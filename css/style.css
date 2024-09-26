@@ -1,6 +1,6 @@
 /* Estilos generales */
 body {
-    background-color: #087655;
+    background-image: url('https://raw.githubusercontent.com/SaraNovis/SaraNovis.github.io/refs/heads/master/img/fondo5.webp');
     color: #ffffff;
     font-family: 'Nerko One', cursive;
     margin: 0;
@@ -8,35 +8,19 @@ body {
 }
 
 /* Efecto de nombre como máquina de escribir */
-#nombre-animado {
-    font-family: "Courier Prime", monospace;
+.typewriter {
+    font-family: "Handjet", sans-serif;
     font-size: 50px;
-    color: #6ACFC7;
-    text-align: center;
-    display: block;
-    margin-top: 30px; /* Ajuste del margen superior */
+    color: #0ec7f0;
     white-space: nowrap;
     overflow: hidden;
-    border-right: .15em solid #6ACFC7; /* Simulación de cursor */
-    width: 15ch;
-    animation: typing 3.5s steps(15), blink-caret .75s step-end infinite;
-}
-
-/* Efecto de escritura */
-@keyframes typing {
-    from { width: 0 }
-    to { width: 15ch }
+    border-right: 0.15em solid #0ec7f0;
+    animation: blink-caret 0.75s step-end infinite;
 }
 
 @keyframes blink-caret {
-    from, to { border-color: transparent }
-    50% { border-color: #6ACFC7 }
-}
-
-/* Contenedor para el nombre en SVG (puedes eliminar si no lo usas) */
-#svg-name {
-    text-align: center;
-    margin-bottom: 20px;
+    from, to { border-color: transparent; }
+    50% { border-color: #0ec7f0; }
 }
 
 /* Navegación */
@@ -44,7 +28,7 @@ body {
     background-color: transparent;
     padding: 10px;
     text-align: center;
-    margin-top: 50px; /* Ajustar la navegación hacia abajo */
+    margin-top: 50px;
     margin-bottom: 100px;
     margin: 0 auto;
     width: 90%;
@@ -59,12 +43,10 @@ body {
 .navigation ul li {
     display: inline-block;
     margin: 0 15px;
-    position: relative;
     background-color: #f4e04d;
     padding: 10px;
     border-radius: 5px;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
-    transform: rotate(-2deg);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -73,21 +55,9 @@ body {
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
 }
 
-.navigation ul li::before {
-    content: '';
-    width: 12px;
-    height: 12px;
-    background-color: blue;
-    border-radius: 50%;
-    position: absolute;
-    top: -10px;
-    left: 50%;
-    transform: translateX(-50%);
-}
-
 .navigation a {
     text-decoration: none;
-    color: #142a2a;
+    color: #083f83;
     font-size: 20px;
     font-family: "Courier Prime", monospace;
     transition: color 0.3s ease;
@@ -97,23 +67,7 @@ body {
     color: #eaf4f3;
 }
 
-/* Estilos para el H1 */
-h1 {
-    font-family: "Handjet", sans-serif;
-    margin-left: 150px;
-    font-size: 50px;
-    color: #ffffff;
-}
-
-/* Estilo para el párrafo debajo de la imagen */
-.presentation p {
-    font-size: 18px;
-    color: #d0e2e2;
-    margin-left: 150px;
-    font-family: "Courier Prime", monospace;
-}
-
-/* Contenedor para imagen y presentación */
+/* Contenedor de la presentación (Home) */
 .container {
     display: flex;
     justify-content: space-between;
@@ -122,45 +76,17 @@ h1 {
     margin-top: 30px;
 }
 
-/* Ajustar tamaño de la imagen */
-.image-container {
-    max-width: 400px;
-    margin-right: 20px;
-    margin-top: 20px;
-}
-
-.profile-img {
-    width: 500px;
-    height: auto;
-    border-radius: 10px;
-    transition: transform 0.5s ease, box-shadow 0.5s ease;
-    margin-left: 40px;
-}
-
-.profile-img:hover {
-    transform: scale(1.05);
-    box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.5);
-}
-
 /* Fondo de corcho para las secciones */
 .section-content {
     background-image: url("../img/corcho.jpg");
     background-size: cover;
-    background-repeat: no-repeat;
     padding: 40px;
     text-align: center;
-    min-height: 300px;
     display: none;
-    position: relative;
-    border: 12px solid transparent;
-    border-image: url("../img/madera.jpg") 30;
-    border-radius: 15px;
-    box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.2);
     margin: 0 auto;
     width: 80%;
 }
 
-/* Mostrar solo la sección visible */
 .section-content.visible {
     display: block;
 }
@@ -169,27 +95,10 @@ h1 {
 .post-it {
     background-color: #f4e04d;
     width: 300px;
-    height: 300px;
     padding: 30px;
     border-radius: 10px;
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
-    position: relative;
-    font-family: 'Courier Prime', monospace;
     margin: 0 auto;
     transform: rotate(-1deg);
-    text-align: left;
-}
-
-.post-it::before {
-    content: '';
-    width: 20px;
-    height: 20px;
-    background-color: blue;
-    border-radius: 50%;
-    position: absolute;
-    top: -15px;
-    left: 50%;
-    transform: translateX(-50%);
 }
 
 /* Botón "Volver a la Home" */
@@ -198,66 +107,12 @@ h1 {
     margin-top: 20px;
     padding: 10px 20px;
     background-color: #6ACFC7;
-    border: none;
     border-radius: 5px;
-    color: #162e2e;
-    cursor: pointer;
     font-size: 16px;
-    text-align: center;
     font-family: "Handjet", sans-serif;
     font-weight: bold;
 }
 
 .back-to-home:hover {
     background-color: #c2e8e4;
-    box-shadow: 0px 0px 10px 5px rgba(0, 255, 255, 0.6);
-}
-
-/* Estilos para el footer */
-footer {
-    background-color: #087655;
-    color: #ffffff;
-    padding: 40px 20px;
-    text-align: center;
-    position: relative;
-    bottom: 0;
-    width: 100%;
-    border-top: 2px solid #8be8e1;
-    height: 60px;
-}
-
-.footer-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 20px;
-}
-
-.social-icons a {
-    text-decoration: none;
-    color: #6ACFC7;
-    font-size: 30px;
-    margin: 0 15px;
-    transition: transform 0.3s, color 0.3s;
-}
-
-.social-icons a:hover {
-    transform: scale(1.2);
-    color: #eaf4f3;
-}
-
-.contact-info p {
-    font-family: "Courier Prime", monospace;
-    font-size: 18px;
-    margin-top: -20px;
-}
-
-.contact-info a {
-    color: #6ACFC7;
-    text-decoration: none;
-}
-
-.contact-info a:hover {
-    text-decoration: underline;
 }
